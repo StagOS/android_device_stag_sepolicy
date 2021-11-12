@@ -11,3 +11,7 @@ set_prop(system_app, recovery_update_prop)
 
 # Read selinux status
 allow system_app selinuxfs:file r_file_perms;
+
+# Allow settings to read and set prop for 'flag_combined_status_bar_signal_icons'
+set_prop(system_app, flag_system_prop);
+get_prop(system_app, flag_system_prop);
